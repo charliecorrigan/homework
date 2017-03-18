@@ -15,9 +15,9 @@ range_max = 1000
 
 (range_min..range_max).each do |i|
   message = ""
-  if divisible_by_7?(i) then message += "Super" end
-  if divisible_by_3?(i) then message += "Fizz" end
-  if divisible_by_5?(i) then message += "Buzz" end
-  if message.empty? then message = i end
+  message += "Super" if divisible_by_7?(i)
+  message += "Fizz" if divisible_by_3?(i)
+  message += "Buzz" if divisible_by_5?(i)
+  message = i if message.empty?
   puts message
 end
